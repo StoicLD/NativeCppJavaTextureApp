@@ -223,6 +223,7 @@ void NativeMedia::setupGraphics(int w, int h) {
     };
 
     glBindBuffer( GL_ELEMENT_ARRAY_BUFFER, ib );
+    //这些是OpenGL ES3.0之后才有的
     glBindVertexArray( 0 ) ;
 
     glGenVertexArrays( 1, &vao );
@@ -412,7 +413,8 @@ JNIEXPORT void JNICALL
 Java_com_example_myapplication2_NativeMediaWrapper_nativeOnCreate(JNIEnv *env, jclass clazz) {
     // TODO: implement nativeOnCreate()
     LOG_INFO("nativeOnCreate");
-    gNativeMedia->destroy();
+    gNativeMedia = new NativeMedia();
+    env->GetJavaVM(&gJavaVM);
 }
 
 JNIEXPORT void JNICALL

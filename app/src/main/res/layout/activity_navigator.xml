@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.myapplication2.NavigatorActivity">
 
     <Button
@@ -16,4 +15,4 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 
-</>
+</RelativeLayout>
